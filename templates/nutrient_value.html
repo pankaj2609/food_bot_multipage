@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% block page_info%}
+<h2 class="nutrient_head">Welcome to the Nutrient page</h2>
+
+<table>
+
+    <!-- <tr>
+        {% for each_heading in table_headings %}
+        <th>{{ each_heading }}</th>
+        {% endfor %}
+    </tr>
+    {% for each_row in table_data %}
+    <tr>
+    {% for each_cell in each_row %}
+    <td>{{ each_cell }}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %} -->
+
+
+    {% for each_row in mongo_data %}
+    <tr>
+    {{ each_row['text'] }}
+    </tr>
+    <br>
+    <br>
+    {% endfor %}
+    
+</table>
+
+{%endblock%}
